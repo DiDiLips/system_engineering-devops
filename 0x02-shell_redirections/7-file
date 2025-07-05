@@ -1,5 +1,2 @@
 #!/bin/bash
-# This complex string combines literal backslashes, quotes, and other special characters.
-# The 'xyz'\''abc' syntax is used to embed a literal single quote within a single-quoted string.
-# Two trailing spaces are added before the final parenthesis to match the 39-character length.
 echo "Best School" > '\\\\!\\"Best School\\"\\'\''\\!\\$\\?\\!\\!\\!\\!\\!:  )'
