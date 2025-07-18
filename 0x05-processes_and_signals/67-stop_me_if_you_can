@@ -1,10 +1,3 @@
 #!/usr/bin/env bash
-# This script stops the 4-to_infinity_and_beyond process without using kill or killall.
-
-# Find the PID of the '4-to_infinity_and_beyond' script and terminate it.
-# pkill -f: Matches the pattern against the full command line.
-# -o: Only match the oldest process (if multiple exist from previous runs, although unlikely for this task).
-# -n: Only match the newest process (useful if you start it multiple times and only want the latest).
-# Without -o or -n, pkill kills all matching processes by default, which is usually desired here.
-# By default, pkill sends the TERM signal (15), which is usually what you want for graceful termination.
+# This script stops the 7-highlander process by sending a SIGTERM signal.
 pkill -f "7-highlander"
