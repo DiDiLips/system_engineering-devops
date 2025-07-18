@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# This script stops the 7-highlander process.
+
+# Use pkill -f to find and send SIGTERM to the '7-highlander' process.
+# pkill sends SIGTERM by default.
+pkill -f "7-highlander"
