@@ -7,4 +7,4 @@
 # -n: Only match the newest process (useful if you start it multiple times and only want the latest).
 # Without -o or -n, pkill kills all matching processes by default, which is usually desired here.
 # By default, pkill sends the TERM signal (15), which is usually what you want for graceful termination.
-pkill -f "7-highlander"
+pkill -f "4-to_infinity_and_beyond"
