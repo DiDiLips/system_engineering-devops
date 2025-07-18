@@ -1,10 +1,8 @@
 #!/usr/bin/env bash
 # This script prints "To infinity and beyond" forever and handles SIGTERM
 
-# Define signal trap for SIGTERM
-trap 'echo "I am invincible!!!"' SIGTERM
+trap 'printf "I am invincible!!!\n"' SIGTERM
 
-# Infinite loop
 while true; do
     echo "To infinity and beyond"
     sleep 2
