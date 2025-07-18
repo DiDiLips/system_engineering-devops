@@ -1,8 +1,16 @@
 #!/usr/bin/env bash
-# This script stops the 4-to_infinity_and_beyond process.
+# This script continuously displays a message and handles SIGTERM.
 
-PID=$(pgrep -f "4-to_infinity_and_beyond" | grep -v "$$")
+# Function to handle the SIGTERM signal
+handle_sigterm() {
+  echo "I am invincible!!!"
+}
 
-if [ -n "$PID" ]; then
-  kill "$PID"
-fi
+# Trap the SIGTERM signal and call the handle_sigterm function
+trap 'handle_sigterm' SIGTERM
+
+# Infinite loop
+while true; do
+  echo "To infinity and beyond"
+  sleep 2
+done
