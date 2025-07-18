@@ -1,6 +1,16 @@
 #!/usr/bin/env bash
-# This script stops the 7-highlander process.
+# This script continuously displays a message and handles SIGTERM.
 
-# Use pkill -f to find and send SIGTERM to the '7-highlander' process.
-# pkill sends SIGTERM by default.
-pkill -f "7-highlander"
+# Function to handle the SIGTERM signal
+handle_sigterm() {
+  echo "I am invincible!!!"
+}
+
+# Trap the SIGTERM signal and call the handle_sigterm function
+trap 'handle_sigterm' SIGTERM
+
+# Infinite loop
+while true; do
+  echo "To infinity and beyond"
+  sleep 2
+done
