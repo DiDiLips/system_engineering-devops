@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# This script lists files, displaying the part of the name after the first dash.
+for file in *; do
+  if [ -f "$file" ] || [ -d "$file" ]; then # Check if it's a file or directory (to exclude non-existent or special entries from glob)
+    echo "${file#*-}"
+  fi
+done
