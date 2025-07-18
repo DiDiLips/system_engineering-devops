@@ -2,14 +2,12 @@
 # This script stops the 4-to_infinity_and_beyond process.
 
 # Find the PID of the '4-to_infinity_and_beyond' script.
-# We use pgrep and exclude the current script's PID ($$) to avoid killing itself if it contains the string.
-# The 'f' option makes pgrep search the full command line, not just the process name.
+# Use pgrep with -f to search the full command line.
+# Use grep -v "$$" to exclude the current script's PID, preventing it from trying to kill itself.
 PID=$(pgrep -f "4-to_infinity_and_beyond" | grep -v "$$")
 
-# Check if a PID was found
+# Check if a PID was found before attempting to kill.
+# The script should produce no output if successful.
 if [ -n "$PID" ]; then
   kill "$PID"
-  echo "Process 4-to_infinity_and_beyond (PID: $PID) terminated."
-else
-  echo "Process 4-to_infinity_and_beyond not found."
 fi
